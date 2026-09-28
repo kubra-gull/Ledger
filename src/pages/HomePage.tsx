@@ -58,7 +58,8 @@ export const HomePage: React.FC = () => {
             {/* Left side: Hero text */}
             <div className="lg:col-span-6 space-y-6 text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12] text-balance">
-                Simple financial management for small businesses.
+               Run your business.
+Know your numbers.
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
