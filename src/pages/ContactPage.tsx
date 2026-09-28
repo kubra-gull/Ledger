@@ -59,7 +59,7 @@ export const ContactPage: React.FC = () => {
       formBody.append('message', formData.message);
 
       await fetch(
-        'https://script.google.com/macros/s/AKfycbzpax21l35YgDMMwVhUvfMFe1VsTP7BWvmFnalSTM-oCWEKWwuc3Gg6S0YSEfyNpOxHKA/exec',
+        'https://script.google.com/macros/s/AKfycbx_WW_N6q8AVHA2u1WMQiIUgQqLSYF0hX4Xid1SrTtKAaE3_ilbeGs25HGScaTBMwgZ4Q/exec',
         {
           method: 'POST',
           mode: 'no-cors',
