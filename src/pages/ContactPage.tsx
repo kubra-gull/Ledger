@@ -16,6 +16,7 @@ export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    businessname: '',
     subject: '',
     message: '',
   });
@@ -56,6 +57,7 @@ export const ContactPage: React.FC = () => {
           body: JSON.stringify({
             name: formData.name,
             email: formData.email,
+            businessname: formData.businessemail,
             subject: formData.subject,
             message: formData.message,
           }),
