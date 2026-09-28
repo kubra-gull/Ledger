@@ -1,0 +1,6 @@
+{
+  "name": "Ledger — Simple Financial Management for Small Businesses",
+  "description": "Ledger helps small businesses and entrepreneurs record sales, track cash, understand profit, manage inventory, and keep financial records organized without complicated accounting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
