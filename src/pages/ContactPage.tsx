@@ -16,7 +16,7 @@ export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    businessname: '',
+    businessname:'',
     subject: '',
     message: '',
   });
@@ -50,34 +50,33 @@ export const ContactPage: React.FC = () => {
     setSubmitting(true);
 
     try {
-      const response = await fetch(
-       'https://script.google.com/macros/s/AKfycbxA6s0tgT-mcWJzRQMjlx8Agqx9IscpeM8NAi8V-9h8NGhDg2cgLZy1sarIH7Eat7m3WA/exec',
+      const formBody = new URLSearchParams();
+
+      formBody.append('name', formData.name);
+      formBody.append('email', formData.email);
+       formBody.append('businessname', formData.businessname);
+      formBody.append('subject', formData.subject);
+      formBody.append('message', formData.message);
+
+      await fetch(
+        'https://script.google.com/macros/s/AKfycbyHe15n5zU25CZQek_tPGHc-0TouNLCCeSLRQKvTsWRwmji_PSPKmHdBG_jK8BbaWMC8Q/exec',
         {
           method: 'POST',
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            businessname: formData.businessemail,
-            subject: formData.subject,
-            message: formData.message,
-          }),
+          mode: 'no-cors',
+          body: formBody,
         }
       );
 
-      const result = await response.json();
+      setSubmitted(true);
 
-      if (result.success) {
-        setSubmitted(true);
-        setFormData({
-          name: '',
-          email: '',
-          businessname:'',
-          subject: '',
-          message: '',
-        });
-      } else {
-        setError('Something went wrong. Please try again.');
-      }
+      setFormData({
+        name: '',
+        email: '',
+        businessname:'',
+        subject: '',
+        message: '',
+      });
+
     } catch (error) {
       console.error('Contact form error:', error);
       setError('Unable to send your message. Please try again.');
@@ -138,11 +137,11 @@ export const ContactPage: React.FC = () => {
                   </p>
 
                   <p className="font-semibold text-slate-900">
-                    Support@myledger.pk
+                    ledger@myledger.pk
                   </p>
 
                   <p className="text-xs text-slate-500 mt-0.5">
-                   Support@myledger.pk
+                    Support@myledger.pk
                   </p>
                 </div>
               </div>
@@ -220,7 +219,7 @@ export const ContactPage: React.FC = () => {
               </h3>
 
               <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                Your message has been received by Shamsa Malik &amp; Kubra Batool. We will get back to you shortly.
+                Your message has been received by Ledger Team. We will get back to you shortly.
               </p>
 
               <div className="pt-4">
