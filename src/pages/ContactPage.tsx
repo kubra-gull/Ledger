@@ -50,7 +50,7 @@ export const ContactPage: React.FC = () => {
 
     try {
       const response = await fetch(
-       https://script.google.com/macros/s/AKfycbxA6s0tgT-mcWJzRQMjlx8Agqx9IscpeM8NAi8V-9h8NGhDg2cgLZy1sarIH7Eat7m3WA/exec,
+       'https://script.google.com/macros/s/AKfycbxA6s0tgT-mcWJzRQMjlx8Agqx9IscpeM8NAi8V-9h8NGhDg2cgLZy1sarIH7Eat7m3WA/exec',
         {
           method: 'POST',
           body: JSON.stringify({
